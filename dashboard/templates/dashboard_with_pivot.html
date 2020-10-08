@@ -1,0 +1,36 @@
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link crossorigin="anonymous"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css"
+          integrity="sha256-8B1OaG0zT7uYA572S2xOxWACq9NXYPQ+U5kHPV1bJN4="
+          rel="stylesheet"/>
+    <title>Dashboard </title>
+</head>
+<body>
+
+    <table class="table is-fullwidth is-striped is-bordered">
+    <thead>
+    <tr><th>Country</th>
+        <th>Recover</th>
+        <th>Confirmed</th>
+        <th>Death</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for country,data in datas.items %}
+    <tr>
+          <td> {{ country }} </td>
+        <td>{{ data.nationwide.recovered }}</td>
+        <td>{{ data.nationwide.confirmed }}</td>
+        <td>{{ data.nationwide.deaths }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>

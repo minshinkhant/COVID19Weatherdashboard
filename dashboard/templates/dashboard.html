@@ -1,0 +1,40 @@
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa\
+9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <title>Dashboard </title>
+</head>
+
+<body>
+    <br>
+    <div align="center"><h1>COVID-19 Dashboard</h1></div>
+    <br>
+    <div style="overflow-y:scroll; height:400px;  display:block;" class="table-responsive">
+    <table  class="table table-dark table-striped table-bordered table-sm table-hover center" >
+    <thead>
+    <tr><th>Country</th>
+        <th>Recover</th>
+        <th>Confirmed</th>
+        <th>Death</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for country,data in datas.items %}
+    <tr>
+          <td> {{ country }} </td>
+        <td>{{ data.nationwide.recovered }}</td>
+        <td>{{ data.nationwide.confirmed }}</td>
+        <td>{{ data.nationwide.deaths }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+    </div>
+</body>
+</html>
+
