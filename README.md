@@ -1,6 +1,6 @@
 # COVID-19 Dashboard with Weather
 
-COVID-19 Dashboard with Weather created "covidnow.com API" using Django Framework and hosted on Heroku.
+A dashboard in progress to provide the plausible correlation between COVID-19 cases and Weather, using Django, Heroku, weatherAPI, COVID-19 API and SQLite.
 
 <img src="page.png">
 
